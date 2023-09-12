@@ -1,4 +1,3 @@
-console.log("Hello world");
 //set current year
 const yearEl = document.querySelector(".year");
 const currntYear = new Date().getFullYear();
@@ -44,11 +43,9 @@ const obsrver = new IntersectionObserver(
     const ent = entries[0];
 
     if (ent.isIntersecting === false) {
-      console.log(ent);
       document.body.classList.add("sticky");
     }
     if (ent.isIntersecting) {
-      console.log(ent);
       document.body.classList.remove("sticky");
     }
   },
@@ -74,7 +71,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
